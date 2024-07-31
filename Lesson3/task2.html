@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson3 - task2</title>
+  </head>
+  <body>
+    <script>
+      let birthDate = prompt('Date of birth');
+      let currentYear = new Date().getFullYear();
+      let currentAge = currentYear - birthDate;
+      console.log(currentAge);
+
+      const adultAge = 18;
+
+      if (currentAge >= adultAge) {
+        console.log('The user is adult.');
+      }
+      else {
+        console.log("The user is minor");
+      }
+
+    </script>
+  </body>
+</html>

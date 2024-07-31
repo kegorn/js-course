@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson3 - Task1</title>
+  </head>
+  <body>
+    <script>
+      //let name = prompt("Enter name:");
+      //console.log("Hi " + name);
+
+      let value1 = prompt('Enter 1st value:');
+      let value2 = prompt('Enter 2nd value:');
+      let value3 = prompt('Enter 3rd value:');
+      // Number(), parseInt(),
+      //value1 = Number(value1);
+      //value2 = Number(value2);
+      //value3 = Number(value3);
+
+      value1 = parseFloat(value1);
+      value2 = parseFloat(value2);
+      value3 = parseFloat(value3);
+
+      //console.log(value1 + value2 + value3);
+      let sum = value1 + value2 + value3;
+      let avg = sum / 3.0;
+      //console.log(avg);
+      console.log('Average is ' + avg);
+      console.log('Average is ' + avg.toFixed(2));
+    </script>
+  </body>
+</html>
