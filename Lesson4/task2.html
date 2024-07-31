@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let initValue = 'a bc cba1';
+      let value = initValue.replace(/\s+/g,"").toLocaleLowerCase();
+      console.log(value[0]);
+
+      let len = value.length;
+      let isPalindrome;
+
+      for (let i = 0; i < len / 2; i++) {
+        if (value[i] !== value[len - i - 1]) {
+          isPalindrome = false;
+          break;
+        }
+        isPalindrome = true;
+      }
+
+      if (isPalindrome) {
+        console.log(`Value ${initValue} is palindrome.`);
+      } else {
+        console.log(`Value ${initValue} is NOT palindrome.`);
+      }
+    </script>
+  </body>
+</html>

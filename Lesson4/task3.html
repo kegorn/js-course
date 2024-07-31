@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getValue(message) {
+        while (true) {
+          let value = prompt(message);
+          let isValid = !isNaN(value) && value !== "" && value !== null;
+          if (isValid) {
+            return Number(value);
+          }
+        }
+      }
+
+      let start = getValue('Enter start of the range.');
+      let end = getValue('Enter end of the range.');
+      if (end < start) {
+        alert('End of the range cannot be less than start of range.');
+      } else {
+        let sum = 0;
+        for (let i = start; i <= end; i++) {
+          sum = sum + i;
+        }
+        console.log(`TH SUM of the values in the range [${start}, ${end}] = ${sum}.`);
+      }
+    </script>
+  </body>
+</html>

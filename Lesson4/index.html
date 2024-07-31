@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // if
+      console.log('First line before loop');
+      let sum = 100;
+      if (sum > 100) {
+        console.log('Discount');
+        console.log('Second line');
+      } else {
+        console.log('No discount');
+        console.log('Third line');
+      }
+
+      let dayNumber = 1;
+      switch (dayNumber) {
+        case 0:
+          console.log('Monday');
+          break;
+        case 1:
+          console.log('Tuesday');
+          break;
+        case 2:
+          console.log('Wednesday');
+          break;
+        default:
+          console.log('Error');
+      }
+
+      let a = 10;
+      let msg = a == 10 ? 'a = 10' : 'a != 10';
+      //alert(msg);
+
+      sum = 10000;
+      let res = sum > 100 ? 'Discount' : 'No discount';
+      console.log(res);
+
+      // loops:
+      let counter = 0;
+      while (counter < 50) {
+        console.log(`while-iteration${counter}`);
+        counter++;
+      }
+
+      counter = 0;
+      do {
+        console.log('do-while-iteration' + counter);
+        counter++;
+      } while (counter < 10);
+
+
+    // for:
+    for(let i = 0; i < 50; i++){
+        console.log(`for_loop-${i}`);
+    }
+
+    </script>
+  </body>
+</html>
