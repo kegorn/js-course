@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson5.2</title>
+  </head>
+  <body>
+    <script>
+      let myGlobal = 'This is global value';
+
+      if (true) {
+        let a = 'local value';
+        console.log('first if statement:');
+        console.log(myGlobal);
+        console.log(a);
+        if (true) {
+          console.log(a);
+        }
+      }
+
+      function test() {
+        console.log('test1 = ' + test1);
+        // variable hoisting
+        var test1 = 1000;
+        console.log('test1 = ' + test1);
+
+      }
+      test();
+
+      if (true) {
+        console.log('second if statement:');
+        console.log(myGlobal);
+        console.log(a); // Not visible
+      }
+    </script>
+    <script>
+      console.log('Other script:');
+      console.log(myGlobal);
+    </script>
+  </body>
+</html>

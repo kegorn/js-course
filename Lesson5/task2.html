@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 5 Task 2</title>
+  </head>
+  <body>
+    <p>Enter value to convert: <input type="text" id="temp" /></p>
+    <div>
+      <button id="btnToC">to C</button>
+      <button id="btnToF">to F</button>
+    </div>
+    <p>Result:</p>
+    <p id="output"></p>
+
+    <script>
+      let getValue = () => Number(document.querySelector('#temp').value);
+      let toCelsius = (temp) => (5 / 9) * (temp - 32);
+      let toFahrenheit = (temp) => (9 / 5) * temp + 32;
+
+      let convert = (converter) => {
+        return () => {
+          let temp = getValue();
+          let value = converter(temp);
+          ShowResult(value);
+        }
+      }
+
+      document.querySelector('#btnToC').onclick = convert(toCelsius);
+      document.querySelector('#btnToF').onclick = convert(toFahrenheit);
+
+      function ShowResult(result) {
+        let output = document.querySelector('#output');
+        output.innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

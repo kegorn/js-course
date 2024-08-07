@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson5</title>
+  </head>
+  <body>
+    <script>
+      //printName('Dmytro');
+      //printName('Egor');
+      //printName('Ira');
+
+      // function hoisting
+      function printName(name = 'default') {
+        if (name === undefined) console.log('undefined');
+        console.log('Hello');
+        console.log(`My name is ${name}`);
+      }
+
+      let test = printName();
+      debugger;
+
+      console.log(test); // return always something - it is function. There is no functions in JS.
+
+      let test2 = function add(x, y) {
+        let sum = x + y;
+        return sum;
+        console.log('after return will not execute');
+      }
+
+      console.log(test2);
+
+      console.log(test2(1, 2));
+
+    </script>
+  </body>
+</html>
