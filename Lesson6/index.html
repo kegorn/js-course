@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let cities = ['Kyiv', 'Paris', 'London'];
+      numbers = [1, 2, 3, 4];
+
+      cities.push('Test'); // add to the end of the array
+      numbers.push(5);
+
+      //console.log(cities.length);
+      //console.log(cities[0]);
+      //console.log(cities[10]);
+      //cities[10] = 'Berlin';
+      //console.log(cities[10]);
+      //console.log(cities.length);
+
+      for (let index = 0; index < cities.length; index++) {
+        //console.log(cities[index]);
+        const city = cities[index];
+        console.log(city);
+      }
+
+      // For in
+      for (const i in cities) {
+        console.log(cities[i]);
+      }
+
+      // For Of
+      // iterator, generator yield
+      for (const iterator of cities) {
+        console.log(iterator);
+      }
+
+      for (const i of numbers) {
+        console.log(i);
+      }
+
+      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+    </script>
+  </body>
+</html>

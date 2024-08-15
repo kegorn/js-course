@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      
+      //let values = [];
+
+      function min(array) {
+        //let min = Number.MAX_VALUE;
+        let min = array[0];
+
+        for(let value of array){
+            if (value < min) min = value;
+        }
+        return min;
+      }
+
+      function max(array) {
+          return Math.max(...array); // Destructor
+      }
+
+      function sum(array) {
+        let sum = 0;
+        for(const value of array){
+            sum += value;
+        }
+        return sum;
+      }
+
+      let test = [1, 2, 400];
+      let values = [10, 20, 4, 6, 11, 9, 125, 1, 8, 0, 3, -8, ...test];
+
+      const minValue = min(values);
+      console.log(minValue);
+
+      const maxValue = max(values);
+      console.log(maxValue);
+
+      const sumValue = sum(values);
+      console.log(sumValue);
+
+    </script>
+  </body>
+</html>

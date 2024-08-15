@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let randomNumber = Math.floor(Math.random() * 10) + 1;
+
+      let attempts = [];
+
+      //console.log(randomNumber); // for debugging
+
+      let gameIdOver = false;
+
+      while (!gameIdOver) {
+        let input = Number(prompt('Enter a value:'));
+        attempts.push(input);
+
+        if (input == randomNumber) {
+          alert(`You guessed the number! The value ${randomNumber}`);
+          gameIdOver = true;
+        } else if (input > randomNumber) {
+          alert(`The value is less than ${input}`);
+        } else if (input < randomNumber) {
+          alert(`The value is more than ${input}`);
+        }
+      }
+      console.log(
+        `Your number of attempts is ${attempts.length}, the random number = ${randomNumber}`
+      );
+      attempts.forEach((x) => console.log(x));
+
+    
+      
+    </script>
+  </body>
+</html>
