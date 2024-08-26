@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 7</title>
+  </head>
+  <body>
+    <script>
+      //let productNames = [];
+      //let productPrises = [];
+
+      let product = {
+        name: 'Phone',
+        price: 10000,
+        displayInfoProp: 1,
+        displayInfo: function () {
+          return `${this.name},${this.price}`;
+        },
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.displayInfo());
+
+      let product2 = {};
+      product2.name = 'Notebook';
+      product2.price = 50000;
+      product2.displayInfo = display;
+
+      console.log(product2);
+      console.log(product2.id);
+      console.log(product2.displayInfo());
+
+      let product3 = new Object();
+      console.log(product3);
+
+      function display() {
+        return `${this.name},${this.price}`;
+      }
+
+      //let product4 = display.apply({name: "a", price: 1});
+      //console.log(product4)
+
+      //() => {       this;      }; // context capturing
+
+      function createProduct(id, name, price) {
+        let product = {};
+        product.id = id;
+        product.name = name;
+        product.price = price;
+        product.displayInfo = display;
+        return product;
+      }
+
+      let product5 = createProduct(3, 'spoon', 3);
+      console.log(product5.displayInfo());
+
+      class Product {
+        constructor(id, name, price) {
+          this.id = id;
+          this.name = name;
+          this.price = price;
+        }
+
+        displayInfo() {
+          return `${this.name},${this.price}`;
+        }
+      }
+
+      let product6 = new Product(6, 'test', 123);
+      console.log(product6.displayInfo());
+
+      
+    </script>
+  </body>
+</html>
