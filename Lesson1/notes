@@ -5,3 +5,4 @@ git branch feature1
 git checkout feature1
 
 git add .
+git commit -m "Feature Banner"
