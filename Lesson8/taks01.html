@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 8 - task01</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <template id="template">
+      <table class="contact">
+        <tr>
+            <td>Name</td>
+            <td>Phone</td>
+            <td>Email</td>
+            <td>Description</td>
+        </tr>
+        <tr>
+          <td>{{firstName}} {{lastName}}</td>
+          <td>{{phone}}</td>
+          <td>{{email}}</td>
+          <td>{{description}}</td>
+        </tr>
+      </table>
+
+      <!-- <section class="contact">
+        <h2>{{firstName}} {{lastName}}</h2>
+        <p>{{phone}}</p>
+        <p>{{email}} </p>
+        <p>{{description}}</p>
+      </section> -->
+    </template>
+
+    <section id="contact-list">
+      <section class="contact">
+        <h2>John Doe</h2>
+        <p>1234123412</p>
+        <p>JohnDoe@.test.com</p>
+        <p>Developer</p>
+      </section>
+    </section>
+
+    <script src="../node_modules/mustache/mustache.min.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+  </body>
+</html>

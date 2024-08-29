@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 8</title>
+    <style>
+      .test {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="list">
+      <li>Item 1</li>
+    </ul>
+    <script>
+      let e = document.querySelector('#list');
+      //e.innerHTML = "<li>Item 2<li>";
+      let li1 = document.createElement("li"); // <li>
+      li1.textContent = "Item 2";
+      e.appendChild(li1);
+
+      let li2 = document.createElement("li"); // <li>
+      li2.textContent = "Item 3";
+      e.appendChild(li2);
+
+      e.insertAdjacentHTML("beforeend", "<li>Item 4</li>")
+      e.insertAdjacentElement("beforeend", li1)
+    </script>
+  </body>
+</html>

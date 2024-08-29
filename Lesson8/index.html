@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 8</title>
+    <style>
+      .test {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="element">Hello World</p>
+    <p>emmet to google</p>
+    <p>Some test</p>
+    <p>Red</p>
+    <script>
+      //let e = document.getElementById('element');
+      //e.innerHTML = "<b>Hello</b>"
+      //e.textContent = "<script>alert(document.cookie)<//script>" // XSS
+
+      //e.classList.add('test');
+      // New style:
+      let e = document.querySelector('#element');
+      e.innerHTML = "<b>Hello</b> world";
+
+    </script>
+  </body>
+</html>
