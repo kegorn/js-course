@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9 </title>
+    <style>
+        .myClass {
+            color: black;
+            background-color: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDiv">Some Text1</div>
+    <div class="myClass">Some Text2</div>
+    <div id="myDiv3" onclick="changeColorGreen();">Some Text3</div>
+    <div id="myDiv4">Some Text4</div>
+
+    <div></div>
+
+    <script>
+        // variant1
+        let div = document.getElementById("myDiv");
+        div.style.color = "white";
+        div.style.backgroundColor = "blue";
+        div.style.padding = "10px";
+
+        // variant 2
+        div.classList.add("myClass");
+
+        // 3
+        let div3 = document.getElementById("myDiv3");
+
+        function changeColorGreen() {
+            div3.style.color = "white";
+            div3.style.backgroundColor = "green";
+            div3.style.padding = "10px";
+        }
+
+        // 4
+        let div4 = document.getElementById("myDiv4");
+        function changeColorRed() {
+            div4.style.color = "white";
+            div4.style.backgroundColor = "red";
+            div4.style.padding = "10px";
+        }
+
+        div4.onclick = changeColorRed;
+
+        div.addEventListener("click", changeColorGreen);
+
+        div.addEventListener("click", changeColorRed);
+        div.removeEventListener("click", changeColorGreen);
+        div.removeEventListener("click", changeColorGreen);
+
+
+    </script>
+</body>
+
+</html>

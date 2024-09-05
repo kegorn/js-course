@@ -1,0 +1,19 @@
+.contact {
+  background-color: lightblue;
+  padding: 20px;
+  margin: 30px 10px;
+  border-radius: 10px;
+}
+
+td {
+  border: 2px solid #ddd;
+}
+
+#contactForm label {
+  display: inline-block;
+  width: 100px;
+}
+
+#contactForm div {
+  margin-bottom: 10px;
+}
